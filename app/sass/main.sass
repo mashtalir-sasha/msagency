@@ -1,0 +1,168 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.25
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fff
+	input, textarea
+		outline: none
+
+.img-r
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a:hover
+	text-decoration: none
+	color: initial
+
+a:focus
+	outline: none
+
+button
+	border: none
+	background-color: transparent
+	outline: none
+	&:focus
+		outline: none
+
+.head
+	position: relative
+	min-height: 100vh
+	background-image: url(../img/bg_head.jpg)
+	background-size: cover
+	background-position: center center
+
+.nav
+	padding: $grid-gutter-width/2 0
+	&-logo
+		width: 110px
+	&-descr
+		font-size: 14px
+		color: #1f1f1f
+		max-width: 320px
+		padding-left: $grid-gutter-width
+		border-left: 1px solid #1f1f1f
+	&-phone
+		float: right
+		&__call
+			display: block
+			font-family: $bold
+			font-size: 18px
+			color: #1f1f1f
+			margin-bottom: $grid-gutter-width/4
+		&__note
+			display: table
+			margin: 0 auto
+			background-color: $accent
+			color: #1f1f1f
+			padding: 2px
+
+.main
+	height: calc(100vh - 115px - 25px)
+	&-flex
+		display: flex
+		height: 100%
+		&__container
+			margin: auto
+	&-ttl
+		font-family: $bold
+		font-size: 26px
+		color: #1f1f1f
+		text-transform: uppercase
+		margin-bottom: $grid-gutter-width*2
+		span
+			display: inline-block
+			padding: 2px 5px
+			margin: 3px 0
+			background-color: $accent
+	&-subttl
+		display: table
+		font-family: $semi
+		font-size: 20px
+		color: #1f1f1f
+		text-transform: uppercase
+		background-color: $accent
+		padding: 5px
+		margin-bottom: $grid-gutter-width
+	&-list
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: $grid-gutter-width*2
+		&__item
+			position: relative
+			font-size: 18px
+			padding-left: 30px
+			margin-bottom: 5px
+			color: #000
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: ''
+				width: 10px
+				height: 10px
+				background-color: $accent
+				position: absolute
+				top: 6px
+				left: 3px
+				transform: rotate(45deg)
+	&-btn
+		position: relative
+		top: 0
+		transition: all ease .3s
+		display: block
+		max-width: 340px
+		background-color: $accent
+		padding: 5px 10px
+		font-family: $bold
+		font-size: 24px
+		text-align: center
+		color: #1f1f1f
+		//margin-bottom: $grid-gutter-width*2
+		border-radius: 8px
+		border-bottom: 5px solid darken($accent, 15%)
+		span
+			display: block
+			font-size: 12px
+		i
+			display: block
+			width: 30px
+			height: 30px
+			background-image: url(../img/right-arrow.svg)
+			background-size: cover
+			position: absolute
+			top: 14px
+			left: 20px
+			transition: all ease .3s
+		&:hover
+			border-bottom-color: transparent
+			top: 5px
+			i
+				left: 50px
+
+.foot
+	&-txt
+		font-size: 12px
+		text-align: center
+	
+
+@import "media" // Always at the end
