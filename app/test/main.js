@@ -164,6 +164,7 @@ $(document).ready(function() {
 						$('.progress-line').slideUp(300);
 						gtag('event','submit',{'event_category':'submit','event_action':'quiz'});
 						fbq('track', 'Lead');
+						window.open('https://drive.google.com/file/d/1ETZk6Y8p3tgIGtmbShCe7bm8XX2DC5BE/view?usp=sharing','_blank');
 					}
 				});
 			}
